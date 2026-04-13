@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "name": "@googleworkspace/samples",
+  "version": "1.0.0",
+  "description": "Node.js samples for [Google Workspace docs](https://developers.google.com/workspace/).",
+  "license": "MIT",
+  "author": "Grant Timmerman",
+  "keywords": [
+    "Google Workspace",
+    "Apps Script",
+    "Calendar",
+    "Drive",
+    "Sheets",
+    "Slides",
+    "API"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/jest": "catalog:",
+    "@types/mocha": "catalog:",
+    "@types/node": "catalog:",
+    "turbo": "catalog:"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check --write",
+    "test": "turbo run test",
+    "check": "turbo run check"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "googleapis-common": "catalog:",
+      "google-auth-library": "catalog:"
+    }
+  }
+}
